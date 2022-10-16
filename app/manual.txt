@@ -1,0 +1,36 @@
+Manual for operating the Twitter Streaming App:
+
+If execution of spark.ipynb does not work go through these steps:
+-----------------------------------------
+1. Install Git for windows => https://gitforwindows.org/
+   gets you Bash for Windows which is essential for job.sh
+-----------------------------------------
+2. Install Python (if not installed) => https://www.python.org/downloads/release/python-383/
+   scroll all the way down to Windows x86 executable installer
+-----------------------------------------
+
+############################
+What are the files for:   ##
+############################
+spark.ipynb	##
+########################################################################
+is the actual application. Gets tweepy data. Calls Spark.	            ##
+Manipulates data in Spark's RDD's. Does sentiment analysis RDD's      ##
+and plots them. Also reads user input (filters searchword)            ##
+and stores variables in var.py.                                       ##
+########################################################################
+job.sh ##
+########################################################################
+In spark.ipynb the shell script job.sh is called.                     ##
+In turn it executes the file NewListener.py and acts like a           ##
+pipeline for the incoming twitter data.                               ##
+########################################################################
+NewListener.py	##
+########################################################################
+makes use of the tweepy package. Queries data using the Twitter API   ##
+and filters it rudimentarily. Gets User input from var.py             ##
+########################################################################
+var.py ##
+########################################################################
+is for storing user input.					                                  ##
+########################################################################
